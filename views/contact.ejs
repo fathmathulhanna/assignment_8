@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= portfolio.name %> | Contact</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <section class="contact-page">
+        <div class="contact-container">
+            <p class="small-text">GET IN TOUCH</p>
+            <h1>Contact Me</h1>
+            <p class="contact-intro"><%= portfolio.contact.message %></p>
+
+            <div class="contact-details">
+                <div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:<%= portfolio.contact.email %>"><%= portfolio.contact.email %></a></p>
+                </div>
+                <div>
+                    <h3>Phone</h3>
+                    <p><a href="tel:<%= portfolio.contact.phone.replace(/\s/g, '') %>"><%= portfolio.contact.phone %></a></p>
+                </div>
+                <div>
+                    <h3>Location</h3>
+                    <p><%= portfolio.contact.location %></p>
+                </div>
+            </div>
+
+            <div class="page-buttons">
+                <a href="/" class="btn">Home</a>
+                <a href="/about" class="btn btn-outline">About Me</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= portfolio.name %> | About Me</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <section class="about-page">
+        <div class="about-container">
+            <p class="small-text">GET TO KNOW ME</p>
+            <h1>About Me</h1>
+
+            <% portfolio.about.forEach(function(paragraph) { %>
+                <p><%= paragraph %></p>
+            <% }); %>
+
+            <h2>Education</h2>
+            <div class="education">
+                <% portfolio.education.forEach(function(item) { %>
+                    <div class="education-box">
+                        <h3><%= item.course %></h3>
+                        <p><%= item.institution %></p>
+                        <span><%= item.status %></span>
+                    </div>
+                <% }); %>
+            </div>
+
+            <h2>Skills</h2>
+            <div class="skills">
+                <% portfolio.skills.forEach(function(skill) { %>
+                    <span><%= skill %></span>
+                <% }); %>
+            </div>
+
+            <div class="page-buttons">
+                <a href="/" class="btn">Home</a>
+                <a href="/contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
